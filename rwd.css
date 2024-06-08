@@ -1,0 +1,193 @@
+.header, .main, .footer, .other, .card-information{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    margin: 20px 0;
+}
+.header > .picture > .introduction{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main > .card-information > .car-price > .Container-price{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer > .icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive for phone */
+@media screen and (max-width : 500px) {
+    .header{
+        height: 300px;
+
+    }
+    .header{
+        max-height: 400px;
+     }
+     .header > .picture > .menu{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header > .picture > .menu > .link{
+        font-size: small;
+    }
+    .header  > .picture > .menu > h3{
+        display: none;
+    }
+    .header > .picture{
+        grid-area: 1/ 1/ -1/ -1;
+    }
+    .main{
+        height: 2000px;
+    }
+    .main > .card-information{
+        grid-area: 1/ 1/ 11/ -1;
+         gap: 12px; 
+    }
+    .main > .card-information > .car-price{
+        grid-area: auto/ auto/ span 3/ span 12;
+        margin: 0 12px;
+    }
+    .main > .other{
+        grid-area: 11/ 1/ -1/ -1;
+        gap: 10px;   
+    }
+    .main> .other > .list{
+        grid-area: 1/ 1/ -1/ -1;
+    }
+    .main > .other > .img{
+        display: none;
+    }
+    .footer{
+        max-height: 1000px;
+    }
+    .footer > h1{
+        grid-area: 2/ 2/ 7/ 9;
+    }
+    .footer > .icon{
+        grid-area: 7/ 2/ 12/ 5;
+    }
+    .footer > p{
+        grid-area:7/ 5/12/ -1 ;
+    }
+}
+
+/* Responsor for laptop */
+@media screen and (min-width : 500px) and (max-width : 900px){
+     .header{
+        height: 250px;
+     }
+     .header > .picture > .menu{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header > .picture > .menu > .link{
+        font-size: medium;
+    }
+    .header > .picture{
+        grid-area: 1/ 1/ -1/ -1;
+    }
+     .main{
+        max-height: 750px;
+     }
+     .main > .card-information{
+        grid-area: 1/ 1/ 9/ -1;
+         gap: 12px; 
+    }
+    .main > .card-information > .car-price{
+        grid-area: auto/ auto/ span 6/ span 6;
+        margin: 0 12px;
+    }
+    .main > .other{
+        grid-area: 9/ 1/ -1/ -1;
+        gap: 10px;   
+    }
+    .main> .other > .list{
+        grid-area: 1/ 1/ -1/ 11;
+    }
+    .main > .other > .img{
+        grid-area: 1/ 11/ -1/ -1;
+    }
+    .footer{
+        max-height: 600px;
+     }
+     .footer > h1{
+        grid-area: 2/ 2/ 7/ 8;
+    }
+    .footer > .icon{
+        grid-area: 7/ 2/ 12/ 5;
+    }
+    .footer > p{
+        grid-area:7/ 5/12/ -1 ;
+    }
+}
+
+/*Responsive  for pc*/
+@media screen and (min-width : 900PX) {
+    .header{
+        height: 400px;
+    }
+    .picture > .menu{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .picture > .menu > .link{
+        font-size: larger;
+    }
+    .header > .picture{
+        grid-area: 1/ 1/ -1/ -1;
+    }
+    .main{
+        height: 500px;
+    }
+    .main > .card-information{
+        grid-area: 1/ 1/ 9/ -1;
+         gap: 12px; 
+    }
+    .main > .card-information > .car-price{
+        grid-area: 1/ auto/ -1/ span 3;
+        margin: 0 12px;
+    }
+    .main > .other{
+        grid-area: 9/ 1/ -1/ -1;
+        gap: 10px;  
+    }
+    .main> .other > .list{
+        grid-area: 1/ 1/ -1/ 9;
+    }
+    .main > .other > .img{
+        grid-area: 1/ 9/ -1/ -1;
+    }
+    
+    .footer{
+        height: 300px;
+    }
+    .footer > h1{
+        grid-area: 2/ 2/ 7/ 8;
+    }
+    .footer > .icon{
+        grid-area: 7/ 2/ 12/ 5;
+    }
+    .footer > p{
+        grid-area:7/ 5/12/ -1 ;
+    }
+}
